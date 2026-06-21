@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>壹号娱乐 · 使用指南与产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: #f2f4f7;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+    .page-wrapper {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    /* hero 轻简版 */
+    .hero {
+      margin-bottom: 2.8rem;
+      padding: 2.4rem 2rem;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.02), 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid #e6edf4;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #0f172a;
+      margin-bottom: 0.4rem;
+    }
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: #475569;
+      border-left: 4px solid #94a3b8;
+      padding-left: 1rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    .hero p {
+      color: #334155;
+      max-width: 700px;
+    }
+
+    /* 卡片通用设计 —— 细边框 + 柔和阴影 */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.4rem 0;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 1.8rem 2rem;
+      flex: 1 1 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 4px 14px rgba(0,0,0,0.02);
+      border: 1px solid #e2eaf2;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04), 0 6px 24px rgba(0,0,0,0.02);
+    }
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: 0.3px;
+      color: #0f172a;
+      border-bottom: 1px solid #eef3f8;
+      padding-bottom: 0.5rem;
+    }
+    .card ul, .card p {
+      font-size: 0.98rem;
+      color: #334155;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .card ul li {
+      position: relative;
+      padding-left: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+    .card ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #94a3b8;
+    }
+    .highlight {
+      background: #f8fafc;
+      border: 1px solid #dee7f0;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem;
+      margin: 2.2rem 0;
+    }
+    .highlight strong {
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    /* 提示区块 */
+    .notice-block {
+      background: #fafbfd;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      margin: 2.8rem 0 2rem;
+      border: 1px solid #dce5ef;
+    }
+    .notice-block h3 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+    .faq-item {
+      margin: 0.8rem 0;
+    }
+    .faq-item .q {
+      font-weight: 500;
+      color: #1e293b;
+    }
+    .faq-item .a {
+      color: #475569;
+      margin-top: 0.2rem;
+    }
+
+    .inline-link {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid #b9d0f0;
+      font-weight: 400;
+    }
+    .inline-link:hover {
+      color: #1d4ed8;
+      border-bottom-color: #1d4ed8;
+    }
+
+    .btn-soft {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 60px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.95rem;
+      color: #1e293b;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn-soft:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+    .footer-note {
+      margin-top: 3rem;
+      padding: 1.2rem 0 0.4rem;
+      text-align: center;
+      border-top: 1px solid #dce5ef;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1.2rem 0.8rem; }
+      .hero { padding: 1.8rem 1.2rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- hero 起手：简明指南语境 -->
+  <div class="hero">
+    <h1>壹号娱乐 · 产品摘要</h1>
+    <div class="tagline">从使用说明到访问提醒 —— 一份克制的知识型概述</div>
+    <p>
+      <a href="https://mains-1haoentertainment.com" class="inline-link">壹号娱乐</a> 是一个面向特定用户群体的数字娱乐服务平台。本页从产品功能、使用场景和注意事项三个维度提供简明参考，帮助新接触者建立合理预期，同时避免过度承诺或模糊指引。
+    </p>
+  </div>
+
+  <!-- 特点 / 亮点 卡片群 -->
+  <div class="card-grid">
+    <div class="card">
+      <h2>功能亮点</h2>
+      <ul>
+        <li>模块化内容聚合，便于按兴趣筛选</li>
+        <li>界面侧重低干扰阅读与操作</li>
+        <li>基础账户体系提供必要的个性化保存</li>
+        <li>持续迭代的辅助工具（如收藏、历史）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>适用场景</h2>
+      <ul>
+        <li>日常轻度资讯浏览与娱乐</li>
+        <li>碎片时间下的内容快速查阅</li>
+        <li>对整洁排版和响应速度有要求的用户</li>
+        <li>希望减少无关推送干扰的自主浏览</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>使用建议</h2>
+      <ul>
+        <li>首次使用建议先浏览导航与分类</li>
+        <li>根据个人偏好调整显示方式</li>
+        <li>关注官方更新以了解功能变动</li>
+        <li>合理分配时间，保持数字使用习惯健康</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 一段自然承接的说明：可信但克制 -->
+  <div class="highlight">
+    <p><strong>关于平台定位</strong> — 本产品不提供金融、投资、医疗等专业建议，也不包含任何形式的自动盈利或高回报承诺。所有内容均来自可验证的公开来源或用户自主上传，平台仅承担基础信息展示与存储功能。使用过程中如遇异常链接或诱导行为，请保持警惕并通过官方渠道反馈。</p>
+  </div>
+
+  <!-- 访问提醒 + FAQ 摘要 (知识型语气) -->
+  <div class="notice-block">
+    <h3>访问提醒 · 常见疑问摘要</h3>
+
+    <div class="faq-item">
+      <div class="q">问：是否需要注册才能浏览大部分内容？</div>
+      <div class="a">目前基础浏览无需账户，但收藏、评论及部分个性化功能需注册使用。注册流程仅收集必要信息，不强制绑定第三方账号。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">问：平台是否有针对移动端的适配？</div>
+      <div class="a">响应式布局已覆盖主流屏幕尺寸，移动端浏览器可直接获得适配界面。专有客户端尚在规划阶段，当前推荐使用现代浏览器访问。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">问：如何判断功能变更或服务调整？</div>
+      <div class="a">平台会通过公告栏及版本日志说明重要更新。建议定期关注页面底部的动态通知区域，或留意服务条款页面顶部的修订标记。</div>
+    </div>
+    <div style="margin-top: 1.4rem;">
+      <p style="color:#4b5563;">如需直接访问产品首页，请使用下方链接：<br>
+        <a href="https://mains-1haoentertainment.com" class="btn-soft">壹号娱乐</a>
+        <span style="margin-left:0.8rem;color:#64748b;font-size:0.9rem;">— 建议使用 HTTPS 连接，并确认地址无误</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 补充一段关于可信使用的说明（不重复、不夸张） -->
+  <p style="margin:1.6rem 0 0.6rem;color:#475569;font-size:0.96rem;border-left:3px solid #d1d9e6;padding-left:1.2rem;">
+    <strong>说明：</strong> 本文档仅为独立介绍页，与 <a href="https://mains-1haoentertainment.com" class="inline-link">壹号娱乐</a> 官方无直接隶属关系。页面中所有描述均基于公开可验证的产品表现，不包含内测数据或未发布功能。用户在任何网络环境下访问时，建议自行确认网络与设备安全。
+  </p>
+
+  <div class="footer-note">
+    <span>产品说明页 · 内容仅供参考 · 版本 1.0</span>
+  </div>
+
+</div>
+</body>
+</html>
