@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料整理 · 竞彩网介绍页</title>
+  <style>
+    /* 基础重置与极简风格 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2e2e2e;
+      line-height: 1.65;
+      padding: 1.8rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 顶部导航：极简文字链 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem 0 1.8rem 0;
+      border-bottom: 1px solid #e6e4e0;
+      margin-bottom: 2.4rem;
+    }
+
+    .nav-brand {
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      color: #4a4a4a;
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      transition: color 0.1s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: #1e1e1e;
+      border-bottom-color: #b0aba4;
+    }
+
+    /* 主标题区域 (hero 微缩) */
+    .hero-tag {
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-tag h1 {
+      font-weight: 380;
+      font-size: 2.3rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #1f1f1f;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-tag p {
+      color: #5f5f5f;
+      font-size: 1rem;
+      max-width: 580px;
+    }
+
+    /* 信息卡片 / 场景模块 — 干净留白 */
+    .section-title {
+      margin: 2.8rem 0 0.8rem 0;
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: #34322f;
+      border-left: 3px solid #cbc6be;
+      padding-left: 0.9rem;
+    }
+
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 0.8rem 0 2rem 0;
+    }
+
+    .scene-item {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.3rem 1.5rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.1s;
+      border: 1px solid #efedea;
+    }
+
+    .scene-item:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .scene-item h3 {
+      font-weight: 420;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      color: #262524;
+    }
+
+    .scene-item p {
+      font-size: 0.9rem;
+      color: #5b5956;
+      margin: 0.2rem 0 0 0;
+      line-height: 1.5;
+    }
+
+    .scene-item .meta-hint {
+      font-size: 0.75rem;
+      color: #98948e;
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* 常见说明 / FAQ 摘要 */
+    .faq-block {
+      margin: 2.6rem 0 1.8rem 0;
+    }
+
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #eae7e2;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 430;
+      font-size: 0.95rem;
+      color: #2b2a28;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      font-size: 0.88rem;
+      color: #6b6863;
+      line-height: 1.5;
+      padding-right: 0.5rem;
+    }
+
+    .faq-a a {
+      color: #4a4a4a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #cbc6be;
+      text-decoration-thickness: 1px;
+    }
+
+    .faq-a a:hover {
+      color: #1c1c1c;
+      text-decoration-color: #7a756e;
+    }
+
+    /* 尾注 / 温和说明 */
+    .footnote {
+      margin-top: 2.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e2dfda;
+      font-size: 0.8rem;
+      color: #88847e;
+      letter-spacing: 0.01em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    .footnote span {
+      display: inline-block;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-tag h1 {
+        font-size: 1.8rem;
+      }
+
+      .scene-item {
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    @media (min-width: 780px) {
+      .hero-tag h1 {
+        font-size: 2.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 顶部导航 (轻量) -->
+  <nav class="top-nav">
+    <div class="nav-brand">资料索引 · 信息整理</div>
+    <div class="nav-links">
+      <a href="#">概览</a>
+      <a href="#">场景</a>
+      <a href="#">说明</a>
+    </div>
+  </nav>
+
+  <!-- hero 区域: 切入角度为资料整理 -->
+  <div class="hero-tag">
+    <h1>信息索引 · 竞彩网</h1>
+    <p>从资料整理与信息归档的视角，梳理围绕竞彩网的核心场景、常见疑问与使用脉络，方便快速查阅与理解。</p>
+  </div>
+
+  <!-- 核心介绍段落 (嵌入链接) -->
+  <section style="margin-bottom: 1.2rem;">
+    <p style="font-size: 0.95rem; color: #4b4945; line-height: 1.6;">
+      竞彩网作为体育赛事与竞猜信息汇总平台，围绕赛事数据、赛前分析以及基础规则三个方面，形成了较为完整的信息链条。
+      无论是对联赛结构的梳理，还是对单场、过关等玩法的说明，<a href="https://sporttery--china.com" style="color: #3b3b3b; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #b5b0a8;">竞彩网</a>在资料归类层面提供了清晰的分组与层级。
+      以下从三个常见使用场景出发，整理出不同需求下的信息重点。
+    </p>
+  </section>
+
+  <!-- 三个场景模块 -->
+  <div class="section-title">场景模块</div>
+  <div class="scene-grid">
+    <div class="scene-item">
+      <h3>赛事数据查阅</h3>
+      <p>关注联赛积分、近期交锋、主客场战绩等基础统计。竞彩网将五大联赛及主流杯赛的数据按赛季与轮次归类，便于横向对比。</p>
+      <div class="meta-hint">资料形态：表格 · 轮次筛选</div>
+    </div>
+    <div class="scene-item">
+      <h3>规则与玩法索引</h3>
+      <p>从胜平负、让球、比分到半全场，不同玩法对应独立的计奖与开奖逻辑。页面结构以玩法为维度，配合简短定义与示例，适合初次接触时查阅。</p>
+      <div class="meta-hint">资料形态：分类条目 · 注释说明</div>
+    </div>
+    <div class="scene-item">
+      <h3>赛前信息整合</h3>
+      <p>包括伤停名单、天气影响、裁判指派等边缘信息。竞彩网通过赛前公告与动态条目汇集这些变量，供使用者自行判断与交叉参考。</p>
+      <div class="meta-hint">资料形态：公告列表 · 动态更新</div>
+    </div>
+  </div>
+
+  <!-- 常见说明 (FAQ摘要) -->
+  <div class="faq-block">
+    <div class="section-title" style="margin-top: 0;">常见说明</div>
+
+    <div class="faq-item">
+      <div class="faq-q">数据延迟如何处理？</div>
+      <div class="faq-a">竞彩网的数据更新与官方出奖时间保持同步，个别场次可能存在分钟级的延迟，建议以页面最后更新时间戳为准。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">玩法中「让球」与「不让球」的区别？</div>
+      <div class="faq-a">让球玩法在赛果基础上加减预设球数，再判断胜平负；不让球即直接比较实际比分。两者在数据表中通常独立列出，方便区分。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">是否提供历史走势或统计图表？</div>
+      <div class="faq-a">目前竞彩网以表格和文字条目为主，部分联赛提供近五场走势示意，深度统计建议结合其他数据平台交叉核对。</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom: none;">
+      <div class="faq-q">关于赛事选择与场次编号</div>
+      <div class="faq-a">每个比赛日会分配固定场次编号（如001、002），编号对应具体对阵与开赛时间。场次信息通常在赛前一天的下午公布。</div>
+    </div>
+
+    <!-- 嵌入第二个链接在说明里 (自然) -->
+    <p style="margin-top: 1rem; font-size: 0.88rem; color: #5c5954; border-left: 2px solid #d8d3cb; padding-left: 0.8rem;">
+      更多细节与当日完整对阵，可前往 <a href="https://sporttery--china.com">竞彩网</a> 直接查阅对应栏目。资料整理以实用性为主，不作任何倾向性建议。
+    </p>
+  </div>
+
+  <!-- 温和说明 / 脚注 -->
+  <div class="footnote">
+    <span>信息整理 · 归纳截至最近更新</span>
+    <span>内容仅作索引参考</span>
+  </div>
+
+</div>
+</body>
+</html>
